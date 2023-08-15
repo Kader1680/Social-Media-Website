@@ -18,10 +18,15 @@
             <a href="./page/Home.php" class="nav-link text-decoration-none text-white">Home</a>
         </li>
         <li class="nav-item">
-            <a href=" " class="nav-link text-decoration-none text-white">add Friend</a>
+            <a href=" /Social-Media-Website/AddFriend.php" class="nav-link text-decoration-none text-white">add Friend</a>
         </li>
         <li class="nav-item">
             <a href=" " class="nav-link text-decoration-none text-white">Message</a>
+        </li>
+        <li class="nav-item">
+            <a href=" " class="nav-link text-decoration-none text-white">Notification</a>
+        </li><li class="nav-item">
+            <a href="/Social-Media-Website/Profile.php " class="nav-link text-decoration-none text-white">Profil</a>
         </li>
         <li class="nav-item">
             <a href="/Social-Media-Website/" class="nav-link text-decoration-none text-white">Logout</a>
