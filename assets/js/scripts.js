@@ -9,8 +9,9 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   nav_menu.classList.remove("active");
 }))
 
+
 let Removing = document.getElementById("delete")
     Removing.addEventListener(("click"), ()=>{
-        alert('dfdsdf');
+        
     })
 

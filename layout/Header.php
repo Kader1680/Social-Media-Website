@@ -15,7 +15,7 @@
         <a href=" /Social-Media-Website/ " class="logo text-decoration-none text-white fs-2">Valley</a>
         <ul class="nav-menu">
         <li class="nav-item">
-            <a href="./page/Home.php" class="nav-link text-decoration-none text-white">Home</a>
+            <a href="/Social-Media-Website/page/Home.php" class="nav-link text-decoration-none text-white">Home</a>
         </li>
         <li class="nav-item">
             <a href=" /Social-Media-Website/AddFriend.php" class="nav-link text-decoration-none text-white">add Friend</a>
