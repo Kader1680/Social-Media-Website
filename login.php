@@ -1,4 +1,6 @@
 <?php 
+session_start();
+
 require "./config.php";
 
 
@@ -9,11 +11,17 @@ if (isset($_POST['submit'])) {
 
     $username = $_POST['UserName'];
     $password = $_POST['Password'];
+    $_SESSION['username'] = $username;
+    $_SESSION['password'] = $password;
 
-    $sql = "SELECT * FROM user WHERE UserName = '$username' AND Password = '$password'  ";
+    $sql = "SELECT * FROM user WHERE UserName = '$username' AND Password = '$password' ";
     $result = $conn -> query($sql);
     if (mysqli_num_rows($result) > 0) {
-        header("location: /Social-Media-Website/page/Home.php");
+        $_SESSION['username']= $_POST['UserName'];
+        $_SESSION['password']= $_POST['password'];
+     
+
+        header("location: /Social-Media-Website/Profile.php");
     }else{
         echo "login fail" ;
     }

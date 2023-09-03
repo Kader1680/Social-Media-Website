@@ -491,6 +491,7 @@ body{
     
     .nav-menu.active{
       right: 0;
+      z-index: 55;
     }
     
   }
@@ -576,4 +577,29 @@ body{
   #button-block div:hover{
     opacity:.8;
     cursor:pointer;
+  }
+  .allImg{
+    flex-wrap: wrap;
+    
+  }
+  .allImg .img{
+    /* width: 9rem;
+    height: 4rem; */
+  }
+
+  input{
+    outline: none;
+  }
+  .postInput{
+    height: auto;
+    background-color: #eeeeee;
+    padding: 10px 0px;
+    WIDTH: 500px;
+    
+  }
+  .content{
+    height: 100px;
+  }
+  .frnd.fn{
+      display: none;
   }

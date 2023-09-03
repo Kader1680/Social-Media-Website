@@ -8,11 +8,13 @@
 <body>
     <?php require "./config.php"; ?>
 
-    <?php require "./layout/Header.php"; ?>
-<button><a href="login.php">login</a></button>
-<?php require "./page/Register.php"; ?>
-<?php require "Social-Media-Website/Profile.php"; ?>
-<?php require "Social-Media-Website/AddFriend.php"; ?>
+    
+    <div class=" ">
+        <?php require "./page/Register.php"; ?>
+        <div>
+        <button><a href="login.php" >Login</a></button>
+        </div>
+    </div>
 
 
 

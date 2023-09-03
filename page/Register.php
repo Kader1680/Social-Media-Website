@@ -1,38 +1,65 @@
 
 
 <?php
+    session_start();
     require "./config.php";
+    $firstName = " ";
+    $lastName = " ";
+    $email = " ";
+    $userName = " ";
+    $password = " ";
+    $confirm = " ";
     if (isset($_POST['submit'])) {
       
       $firstName = $_POST['FirstName'];
-      $lastName = $_POST['LastName'];
-      $email = $_POST['Email'];
-      $userName = $_POST['UserName'];
-      $password = $_POST['Password'];
-      $confirm = $_POST['Confirming'];
+      $lastName  = $_POST['LastName'];
+      $email  = $_POST['Email'];
+      $userName  = $_POST['UserName'];
+      $password  = $_POST['Password'];
+      $confirm  = $_POST['Confirming'];
+      // $_SESSION['id_user']  = "";
       
-      
-      // check if user data is same in db
-
-      $sql = "SELECT * FROM user WHERE  FirstName = '$firstName' OR LastName = '$lastName' OR  UserName = '$userName'  ";
-      $result = $conn ->query($sql);
-      if ($result) {
-        $array = mysqli_num_rows($result);
-        if ($array > 0) {
-          echo "error have same data";
-        }
-        else{
-          if ($password != $confirm) {
-             echo "passwor same pleaser try agin";
-          }else{
-            $sql = " INSERT INTO user (FirstName, LastName, UserName, Email, Password, ConfirmPass)".
-            "VALUES ('$firstName', '$lastName', '$email', '$userName', '$password', '$confirm')";
-            $result = $conn ->query($sql);
-            header("Location: /Social-Media-Website/page/Home.php");
+      if (empty($firstName) || empty($lastName) || empty($email) || empty($userName) || empty($password) || empty($confirm) ) {
+        echo "Please Enter Your Information";
+      }else{
+         // check if user data is same in db
+   
+        $sql = "SELECT * FROM user WHERE  FirstName = '$firstName' OR LastName = '$lastName' OR  UserName = '$userName'  ";
+        $result = $conn ->query($sql);
+        if ($result) {
+          $array = mysqli_num_rows($result);
+          if ($array > 0) {
+            echo "Please The Data Exit Try Again";
           }
-
+          else{
+            if ($password != $confirm) {
+               echo "passwor same pleaser try agin";
+            }else{
+              $_SESSION['firstName'] = $firstName  ;
+              $_SESSION['lastName'] = $lastName  ;
+              $_SESSION['email'] = $email  ;
+              $_SESSION['userName'] = $userName  ;
+              $_SESSION['password'] = $password  ;
+              $_SESSION['confirm'] = $confirm  ;
+              $sql = " INSERT INTO user (FirstName, LastName, UserName, Email, Password, ConfirmPass)".
+              // "VALUES ('$firstName', '$lastName', '$userName', '$email', '$password', '$confirm')";
+              "VALUES ('$_SESSION[firstName]', 
+              '$_SESSION[lastName]', 
+              '$_SESSION[userName] ', 
+              '$_SESSION[email]', 
+              '$_SESSION[password]', 
+              '$_SESSION[confirm]')";
+              $result = $conn ->query($sql);
+              echo "<script>window.location.href='Profile.php' </script>";
+              // header("Location: /Social-Media-Website/page/Home.php");
+            }
+  
+          }
         }
+        
       }
+     
+      
       
       
     }

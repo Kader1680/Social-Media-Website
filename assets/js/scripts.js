@@ -9,9 +9,12 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
   nav_menu.classList.remove("active");
 }))
 
-
 let Removing = document.getElementById("delete")
-    Removing.addEventListener(("click"), ()=>{
-        
-    })
+let fb = document.querySelectorAll('.allFreind #fb')
+fb.forEach(el => {
+    el.addEventListener(("click"), ()=>{
+        // element.setAttribute('di')
+        el.style.display ="none"
 
+    })
+});

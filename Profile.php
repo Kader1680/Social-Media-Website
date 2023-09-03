@@ -1,6 +1,29 @@
 
 
+<?php 
+session_start();
+require "./config.php";
+    
+    //  $_SESSION['firstName'] = $firstName  ;
+    //  $_SESSION['lastName'] = $lastName  ;
+    //  $_SESSION['email'] = $email  ;
+    //  $_SESSION['userName'] = $userName  ;
+    //  $_SESSION['password'] = $password  ;
+    //  $_SESSION['confirm'] = $confirm  ;
 
+
+    if (isset($_POST['submit'])) {
+        $status = $_POST['stuation'];
+        $univer = $_POST['univer'];
+        $work = $_POST['work'];
+        $study = $_POST['study'];
+        
+    $sql =  "INSERT INTO info (stuation, univer, work, study)"."VALUES ('$status', '$univer', '$work', '$study') ";
+    $result = $conn->query($sql);
+    }
+
+
+?>
 
 
 
@@ -10,6 +33,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
     <?php include "./assets/css/style.css"; ?>
@@ -22,42 +46,48 @@
         <div class=" ">
             <div class="row">
                 <div class="bg-white col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <img class=" border-rounded rounded-circle" height="150px" width="150px" src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2010/07/23/20/419247.jpg?width=1200" />
+                    <img class=" border-rounded rounded-circle" height="150px" width="150px" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" />
                 </div>
                 <div class="bg-white col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
                     <ul class=" list-style">
 
                     <?php  require "./config.php";
+                    
+                    echo "<p class='bg-gray'> firstName : ".$_SESSION['firstName']."</p>" ;
+                    echo "<p> lastName : ".$_SESSION['lastName']."</p>";
+                    echo  "<p> email : ".$_SESSION['email']."</p>";
+                    echo  "<p> userName  : ". $_SESSION['userName']."</p>" ;
 
+                    //     $sql = "SELECT FirstName, LastName, UserName, Email FROM user limit 1";
+                    //     $result = $conn->query($sql);
 
-                        $sql = "SELECT FirstName, LastName, UserName, Email FROM user";
-                        $result = $conn->query($sql);
+                    //     if ($result -> num_rows > 0 ) {
+                    //         while ($row = $result-> fetch_assoc()) {
 
-                        if ($result -> num_rows > 0 ) {
-                            while ($row = $result-> fetch_assoc()) {
-                                echo "
+                    //             echo "
                                 
-                                <li>First Name :
-                                    <span >$row[FirstName]</span>
-                                </li>
-                                <li>Last Name :
-                                    <span >$row[LastName]</span>
-                                </li>
-                                <li>Email :
-                                    <span>$row[UserName]</span>
-                                </li>
-                                <li>Email :
-                                    <span>$row[Email]</span>
-                                </li>
-                                <li>Gender :
-                                <span>Male</span>
-                                </li>
+
+                    //             <li>First Name :
+                    //                 <span >$row[FirstName]</span>
+                    //             </li>
+                    //             <li>Last Name :
+                    //                 <span >$row[LastName]</span>
+                    //             </li>
+                    //             <li>Email :
+                    //                 <span>$row[UserName]</span>
+                    //             </li>
+                    //             <li>Email :
+                    //                 <span>$row[Email]</span>
+                    //             </li>
+                    //             <li>Gender :
+                    //             <span>Male</span>
+                    //             </li>
                                 
                                 
-                                ";
-                            }
+                    //             ";
+                    //         }
                             
-                    }
+                    // }
 
                     ?>
 
@@ -67,52 +97,88 @@
             </div>
             <div class="row mt-3 bg-white">
                 <div class=" col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-                <ul class=" list-style">
-                    <select class="form-select" aria-label="Default select example">
-                        <option value="1">marrired</option>
-                        <option value="2">Single</option>
-                        <option value="3">Devorces</option>
-                        <option value="3">RelationShip</option>
-                    </select>
-                    <div class="col_half">
-                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                            <input type="text" name="FirstName" placeholder="Add University" />
-                            <button type="submit" >click</button>
-                        </div>
-                    </div>
-                    <div class="col_half">
-                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                            <input type="text" name="FirstName" placeholder="What you Study In University" />
-                            <button type="submit" >click</button>
-
-                        </div>
-                    </div>
-                    <div class="col_half">
-                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                            <input type="text" name="FirstName" placeholder="Work Currently" />
-                            <button type="submit" >click</button>
-
-                        </div>
-                    </div>
-                    <div class="col_half">
-                        <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
-                            <input type="text" name="FirstName" placeholder="First Name" />
-                            <button type="submit" >click</button>
-
-                        </div>
-                    </div>
-                </ul> 
-                                 
+                    <form action="" method="post">
                     
+                        
+                    <div class="col_half mt-2 d-flex">
+                        <div class="input_field"> 
+                            <input class="border-1 border-primary  border-top-0 border-start-0 border-end-0" type="text" name="stuation" placeholder="Add status" />
+                            <button class=" border-0  rounded-2" name="submit" type="submit" ><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <span>
+                        <?php 
+                        $sql = "SELECT * from info limit 1";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row =  $result->fetch_assoc()) {
+                            
+                                echo"<span>$row[stuation]</span>";
+                            }
+                        }
+                    ?>
+                        </span>
+                </div>
+                <div class="col_half mt-2 d-flex">
+                        <div class="input_field"> 
+                            <input class="border-1 border-primary  border-top-0 border-start-0 border-end-0" type="text" name="univer" placeholder="Add University" />
+                            <button class=" border-0  rounded-2" name="submit" type="submit" ><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                        <span>
+                        <?php 
+                        $sql = "SELECT * from info limit 1";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row =  $result->fetch_assoc()) {
+                            
+                                echo"<span>$row[univer]</span>";
+                            }
+                        }
+                    ?>
+                        </span>
+                </div>
+                <div class="col_half mt-2 d-flex">
+                        <div class="input_field"> 
+                            <input class="border-1 border-primary  border-top-0 border-start-0 border-end-0" type="text" name="study" placeholder="What you Study In University" />
+                            <button class=" border-0  rounded-2" name="submit" type="submit" ><i class="fa-solid fa-plus"></i></button>
 
-                </ul>
+                        </div>
+                        <span>
+                        <?php 
+                        $sql = "SELECT * from info limit 1";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row =  $result->fetch_assoc()) {
+                            
+                                echo"<span>$row[study]</span>";
+                            }
+                        }
+                    ?>
+                        </span>
                 </div>
-                <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-                    <div class=" bg-secondary d-flex justify-content-center align-items-center">
-                        <input class="  border-1" name="post" type="text">
-                        <button class=" border-0" type="submit" name="submit">Post</button>
-                    </div>
+                <div class="col_half mt-2 d-flex">
+                        <div class="input_field"> 
+                            <input class="border-1 border-primary  border-top-0 border-start-0 border-end-0" type="text" name="work" placeholder="Work Currently" />
+                            <button class=" border-0  rounded-2" name="submit" type="submit" ><i class="fa-solid fa-plus"></i></button>
+
+                        </div>
+                        <span>
+                        <?php 
+                        $sql = "SELECT * from info limit 1";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row =  $result->fetch_assoc()) {
+                            
+                                echo"<span>$row[work]</span>";
+                            }
+                        }
+                    ?>
+                        </span>
                 </div>
+                 
+                    </form>
+                
+                </div>
+                
             </div>
             <div>
 

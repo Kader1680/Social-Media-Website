@@ -1,0 +1,56 @@
+        <?php require "./login.php"; ?>
+
+
+
+<?php
+    require "../config.php";
+    // require "../database.php";
+    // $post = " ";
+
+    // if (isset($_POST['submit'])) {
+      
+    //   $post = $_POST['post'];
+
+      
+    //   if (empty($post) ) {
+    //     echo "Please Enter Your POst";
+
+    //   }
+    //   $sql = " INSERT INTO post (content)".
+    //           "VALUE ('$post')";
+    //           $result = $conn ->query($sql);
+      
+    // }
+
+
+?>
+
+
+ if (empty($status) || empty($univer) || empty($work) || empty($study) ) {
+            echo"";
+        }else{
+            $sql =  "INSERT INTO info (stuation, univer, work, study)"."VALUES ('$status', '$univer', 'work', '$study') ";
+            $result = $conn->query($sql);
+        }
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <title>Valley | Home </title>
+</head>
+<body>
+    <?php require "../layout/Header.php"; ?>
+
+    <form method="post" action="">
+
+      <input name="post" type="text" >
+      <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+
+    </form>
+</body>
+</html>
