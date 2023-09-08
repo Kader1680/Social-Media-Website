@@ -1,5 +1,3 @@
-
-
 <?php
     session_start();
     require "./config.php";
@@ -50,7 +48,7 @@
               '$_SESSION[password]', 
               '$_SESSION[confirm]')";
               $result = $conn ->query($sql);
-              echo "<script>window.location.href='Profile.php' </script>";
+              echo "<script>window.location.href='/Social-Media-Website/page/Home.php' </script>";
               // header("Location: /Social-Media-Website/page/Home.php");
             }
   

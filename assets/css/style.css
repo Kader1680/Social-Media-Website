@@ -496,15 +496,18 @@ body{
     
   }
   #fb{
-    width:500px;
+    width:325px;
+    margin: auto;
     border:1px solid gray;
     border-radius:5px;
     position:relative;
     height:175px;
+    background-color: white;
   }
   #fb p{
     font-family:sans-serif;
-    margin: 0 0 0 10px;
+    margin: -10px 0rem;
+    font-weight: 600;
     line-height:30px;
   }
   
@@ -549,8 +552,8 @@ body{
   
   #button-block{
     position:absolute;
-    right:10px;
-    top:85px;
+    right: 40px;
+    top: 110px;
   }
   
   #button-block div{
@@ -568,8 +571,7 @@ body{
   
   #delete{
     color:#222;
-    background-color:#bbb;
-    border:1px solid #999;
+    background-color:#dedede;
     padding:6px;
     margin-right:0;
   }
@@ -617,5 +619,29 @@ body{
     /
   }
   .ownFriend{
-    /* width: 22rem; */
+    width: 22rem;
+    height: 21rem;
   }
+  .allFreind{
+    margin: auto;
+  }
+
+  .cover{
+    background-image: url("https://www.sgs.com/-/media/sgscorp/images/natural-resources/large-sgs-world-edit.cdn.en.1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .pics{
+    width: 30px;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    padding: 4px;
+    
+  }
+.PicsProfil{
+  position: relative;
+}
+.PicsProfil button{
+  position: absolute;
+}

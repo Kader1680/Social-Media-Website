@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 include "./config.php";
 
 if (isset($_POST['submit'])) {
@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
     <?php require "./layout/Header.php"; ?>
-    <div class="allFreind row bg-white"  >
+    <div class="allFreind row"  >
     <div  id="fb" >
         
         
@@ -40,8 +40,8 @@ if (isset($_POST['submit'])) {
         <br>
         <p id="info">Dusting moskovicth<input name="friend" class=" invisible border-0 w-25 bg-transparent border-O" value="Dusting moskovicth" type="text">
         <div id="button-block">
-                <button  name="submit" type="submit" class="btn border-0" id="confirm">Confirm</button>
-                <div id="delete">Delete Request</div>
+                <button  name="submit" type="submit" class="btn border-0" id="confirm">Add Friend</button>
+                <div id="delete">Delete</div>
         </div>
         </form>
         
@@ -60,8 +60,8 @@ if (isset($_POST['submit'])) {
 
         <p id="info">Ilisabell Anne<input name="friend" class=" invisible border-0 w-25 bg-transparent border-O" value="Ilisabell Anne" type="text">
         <div id="button-block">
-            <button name="submit" type="submit" class="btn border-0" id="confirm">Confirm</button>
-            <div class="delete" id="delete">Delete Request</div>
+            <button name="submit" type="submit" class="btn border-0" id="confirm">Add Friend</button>
+            <div class="delete" id="delete">Delete</div>
         </div>
         </form>
     </div>
@@ -75,8 +75,8 @@ if (isset($_POST['submit'])) {
   
           <p id="info">Ilisabell Anne<input name="friend" class=" invisible border-0 w-25 bg-transparent border-O" value="Ilisabell Anne" type="text">
           <div id="button-block">
-              <button name="submit" type="submit" class="btn border-0" id="confirm">Confirm</button>
-              <div class="delete" id="delete">Delete Request</div>
+              <button name="submit" type="submit" class="btn border-0" id="confirm">Add Friend</button>
+              <div class="delete" id="delete">Delete</div>
           </div>
           </form>
       </div>
@@ -90,8 +90,8 @@ if (isset($_POST['submit'])) {
   
           <p id="info">Ilisabell Anne<input name="friend" class=" invisible border-0 w-25 bg-transparent border-O" value="Ilisabell Anne" type="text">
           <div id="button-block">
-              <button name="submit" type="submit" class="btn border-0" id="confirm">Confirm</button>
-              <div class="delete" id="delete">Delete Request</div>
+              <button name="submit" type="submit" class="btn border-0" id="confirm">Add Friend</button>
+              <div class="delete" id="delete">Delete</div>
           </div>
           </form>
       </div>
@@ -105,8 +105,8 @@ if (isset($_POST['submit'])) {
   
           <p id="info">Ilisabell Anne<input name="friend" class=" invisible border-0 w-25 bg-transparent border-O" value="Ilisabell Anne" type="text">
           <div id="button-block">
-              <button name="submit" type="submit" class="btn border-0" id="confirm">Confirm</button>
-              <div class="delete" id="delete">Delete Request</div>
+              <button name="submit" type="submit" class="btn border-0" id="confirm">Add Friend</button>
+              <div class="delete" id="delete">Delete</div>
           </div>
           </form>
       </div>
@@ -120,8 +120,8 @@ if (isset($_POST['submit'])) {
   
           <p id="info">Ilisabell Anne<input name="friend" class=" invisible border-0 w-25 bg-transparent border-O" value="Ilisabell Anne" type="text">
           <div id="button-block">
-              <button name="submit" type="submit" class="btn border-0" id="confirm">Confirm</button>
-              <div class="delete" id="delete">Delete Request</div>
+              <button name="submit" type="submit" class="btn border-0" id="confirm">Add Friend</button>
+              <div class="delete" id="delete">Delete</div>
           </div>
           </form>
       </div>

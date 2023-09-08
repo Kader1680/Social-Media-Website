@@ -1,3 +1,11 @@
+<?php 
+
+session_start();
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     
@@ -10,16 +18,6 @@
 <body>
     <?php require "../layout/Header.php"; ?>
 
-    <div class=" container">
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6 postInput bg-white d-flex justify-content-center align-items-center">
-            <input class="  border-1" name="post" type="text">
-            <button class=" border-0" type="submit" name="submit">Post</button>
-        </div>
-        <div class=" w-25 bg-white col-sm-12 col-md-12 col-lg-6 col-xl-6 col-xxl-6">
-            <div  class="content w-100 bg-primary">Header</div>
-            gg
-        </div>
-
-    </div>
+  
 </body>
 </html>

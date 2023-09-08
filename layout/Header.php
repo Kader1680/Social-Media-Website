@@ -26,10 +26,36 @@
         <li class="nav-item">
             <a href=" " class="nav-link text-decoration-none text-white">Notification</a>
         </li><li class="nav-item">
-            <a href="/Social-Media-Website/Profile.php " class="nav-link text-decoration-none text-white">Profil</a>
+
+            <?php
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $database = "Valley";
+            
+            // Create connection
+            $conn = new mysqli($servername, $username, $password, $database);
+
+            // Check connection
+            if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+            }
+            $sql ="SELECT * FROM user where UserName = '$_SESSION[userName]' ";
+
+            $res = $conn->query($sql);
+            while ($row = mysqli_fetch_assoc($res)) {
+                ?>
+        
+        <a href="/Social-Media-Website/Profile.php?id_user= <?php echo $row['id_user']; ?> " class="nav-link text-decoration-none text-white">Profil</a>
+
+        <?php
+    }
+            
+            ?>
+
         </li>
         <li class="nav-item">
-            <a href="/Social-Media-Website/" class="nav-link text-decoration-none text-white">Logout</a>
+            <a href="/Social-Media-Website/login.php" class="nav-link text-decoration-none text-white">Logout</a>
         </li>
         </ul>
         <div class="hamburger">
