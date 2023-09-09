@@ -114,6 +114,17 @@
           </div>
             	
           <input class="button" name="submit" type="submit" value="Register" />
+          <button style="background: #001476;
+          
+          height: 35px;
+          line-height: 35px;
+          width: 100%;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          
+          font-size: 1.1em;
+          margin-bottom: 10px;" ><a href="login.php" class="text-white text-decoration-none">Login Here</a></button>
         </form>
       </div>
     </div>

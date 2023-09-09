@@ -7,19 +7,14 @@
 </head>
 <body>
     <?php require "./config.php"; ?>
-
-    
     <div class=" ">
         <?php require "./page/Register.php"; ?>
-        <div>
-        <button><a href="login.php" >Login</a></button>
-        </div>
-    </div>
 
 
 
 </body>
 </html>
+
 
 
 
