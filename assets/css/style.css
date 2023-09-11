@@ -594,9 +594,9 @@ body{
   }
   .postInput{
     height: auto;
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
     padding: 10px 0px;
-    WIDTH: 500px;
+    /* WIDTH: 500px; */
     
   }
   .content{
@@ -619,8 +619,10 @@ body{
     /
   }
   .ownFriend{
-    width: 22rem;
-    height: 21rem;
+    /* width: 22rem;
+    height: 21rem; */
+    display: flex;
+    justify-content: space-between;
   }
   .allFreind{
     margin: auto;
@@ -645,3 +647,45 @@ body{
 .PicsProfil button{
   position: absolute;
 }
+.ownFriend{
+  width: 22rem;
+  height: 21rem;
+  display: block;
+  
+}
+@media(min-width:768px){
+  .ownFriend{
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .ownFriend .square{
+    width: 49%;
+  }
+  .subHead .bio{
+    display: grid; 
+    grid-template-columns: 242px 229px 237px; 
+  }
+  .postField .square{
+    width: 49%;
+  }
+}
+.bd form .PostInput{
+  border: 1px solid #d7d7d7;
+  outline: none;
+  padding: 5px 15px;
+}
+.postField .square{
+  background-color: white;
+  border: 1px solid;
+  margin-top: 1rem;
+  padding: 12px 0px;
+}
+.square .bd{
+  padding: 15px 3px;
+  border: 1px solid #f2f2f2;
+  margin: 14px 0px;
+} 
