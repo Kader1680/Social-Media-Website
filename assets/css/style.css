@@ -6,7 +6,7 @@
 
 body{
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: rgb(216, 216, 216);
+  background-color: #f2f2f2;
 }
 .clearfix:after {
     content: "";
@@ -654,6 +654,20 @@ body{
   
 }
 @media(min-width:768px){
+  .homeContent .service{
+    width: 700px;
+  }
+  .postOther img{
+    width: 100%;
+  }
+  .cover img{
+    width: 150px;
+    height: 150px;
+  }
+  .bio .square{
+    width: 200px;
+    margin: auto;
+  }
   .ownFriend{
     display: flex;
     justify-content: space-between;
@@ -666,8 +680,8 @@ body{
     width: 49%;
   }
   .subHead .bio{
-    display: grid; 
-    grid-template-columns: 242px 229px 237px; 
+    /* display: grid; 
+    grid-template-columns: 242px 229px 237px;  */
   }
   .postField .square{
     width: 49%;
@@ -680,12 +694,59 @@ body{
 }
 .postField .square{
   background-color: white;
-  border: 1px solid;
+  /* border: 1px solid; */
+  box-shadow: 0 0 10px #ddd;
   margin-top: 1rem;
   padding: 12px 0px;
 }
 .square .bd{
-  padding: 15px 3px;
+  /* padding: 15px 3px; */
   border: 1px solid #f2f2f2;
   margin: 14px 0px;
+} 
+@media(max-width: 767px){
+  .homeContent .service{
+    width: 90%;
+    margin: 2rem auto;
+  }
+  .bio .square{
+    width: 100%;
+    margin: auto;
+  }
+  .cover img{
+    width: 6rem;
+    height: 6rem;
+  }
+  /* .postField{
+    margin-top: 11rem;
+  } */
+}
+
+.postField .midel{
+    width: 90%;
+    margin: auto;
+}
+.postOther img{
+  width: 100%;
+}
+
+
+.notificaiton{
+  display: none;
+  transition: 1s;
+}
+
+
+.notificaiton.BlockNotifcation{
+  display: block;
+  transition: 1s;
+
+} 
+.MessageNotifiction{
+  display: none;
+  transition: 1s;
+}
+.MessageNotifiction.Blockmessage{
+  display: block;
+  transition: 1s;
 } 

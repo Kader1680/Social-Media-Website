@@ -259,6 +259,25 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 if ($_GET['id_user']) {
                 $id_user = $_GET['id_user'];
                 $sql ="SELECT cotent FROM post where user_post = '$id_user' ";
@@ -300,3 +319,159 @@ if ($_GET['id_user']) {
                     }
                 }
                 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                 <div  class="square">
+               
+                    <div style="background-color: #001476;" class="head text-white  p-1 text-center">Information About <?php echo $_SESSION['userName'] ?></div>
+                    <div style="height:auto; display:flex; justify-content: center; " class="bd ">
+                    <form action="/Social-Media-Website/Profile.php" method="post">
+                    
+                        
+                     <div class= " bg-white col_half mt-2 d-flex">
+                        <div class="input_field"> 
+                            <input class="border-1 border-primary  border-top-0 border-start-0 border-end-0" type="text" name="stuation" placeholder="Add status" />
+                            <button style="background-color: #001476; color: white; padding: 0px 7px;" class=" border-0  rounded-2" name="submit" type="submit" >+</button>
+                        </div><br>
+                        <p>
+                        <?php 
+                        $sql = "SELECT * from info limit 1";
+                        $result = $conn->query($sql);
+                        if ($result->num_rows > 0) {
+                            while ($row =  $result->fetch_assoc()) {
+                            
+                                echo"$row[stuation]";
+                            }
+                            }
+                        ?>
+                        </p>
+                    </div>
+                    <div class=" bg-white col_half mt-2 d-flex">
+                            <div class="input_field"> 
+                                <input class="border-1 border-primary  border-top-0 border-start-0 border-end-0" type="text" name="univer" placeholder="Add University" />
+                                <button style="background-color: #001476; color: white; padding: 0px 7px;" class=" border-0  rounded-2" name="submit" type="submit" >+</button>
+                            </div>
+                            <span>
+                            <?php 
+                            $sql = "SELECT * from info limit 1";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row =  $result->fetch_assoc()) {
+                                
+                                    echo"<span>$row[univer]</span>";
+                                }
+                            }
+                        ?>
+                            </span>
+                    </div>
+                    <div class=" bg-white col_half mt-2 d-flex">
+                            <div class="input_field"> 
+                                <input class="border-1 border-primary  border-top-0 border-start-0 border-end-0" type="text" name="study" placeholder="What you Study In University" />
+                                <button style="background-color: #001476; color: white; padding: 0px 7px;" class=" border-0  rounded-2" name="submit" type="submit" >+</button>
+
+                            </div>
+                            <span>
+                            <?php 
+                            $sql = "SELECT * from info limit 1";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row =  $result->fetch_assoc()) {
+                                
+                                    echo"<span>$row[study]</span>";
+                                }
+                            }
+                        ?>
+                            </span>
+                    </div>
+                    <div class="bg-white col_half mt-2 d-flex">
+                            <div class="input_field"> 
+                                <input class="border-1 border-primary  border-top-0 border-start-0 border-end-0" type="text" name="work" placeholder="Work Currently" />
+                                <button style="background-color: #001476; color: white; padding: 0px 7px;" class=" border-0  rounded-2" name="submit" type="submit" >+</button>
+
+                            </div>
+                            <span>
+                            <?php 
+                            $sql = "SELECT * from info limit 1";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                while ($row =  $result->fetch_assoc()) {
+                                
+                                    echo"<span>$row[work]</span>";
+                                }
+                            }
+                        ?>
+                            </span>
+                    </div>
+         
+                    </form>
+                    
+                    </div>
+                </div>    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <a href="/Social-Media-Website/Profile.php" class="nav-link text-decoration-none text-white">Profil</a>
