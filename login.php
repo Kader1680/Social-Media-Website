@@ -18,7 +18,18 @@ if (isset($_POST['submit'])) {
   
         header("location: /Social-Media-Website/page/Home.php");
     }else{
-        echo "login fail" ;
+        echo "
+            <div style='background-color: white;
+            width: 400px;
+            margin: auto;
+            margin-top: 2rem;' class='squaree'>
+              <div style='background-color: #ff7676;     text-align: center;
+              padding: 10px 0px; ' class='head p-1 text-center'>Login Failed</div>
+              <div style='height:auto; 
+              text-align: center; padding: 5px;' class='bd bg-light'>Incorect Username or Password </div>
+            </div>
+                
+              " ;
     }
 }
 ?>

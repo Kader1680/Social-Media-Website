@@ -25,7 +25,7 @@ body{
     margin: 8% auto 0;
     position: relative;
     z-index: 1;
-    border-top: 5px solid   #001476;
+    border-top: 5px solid   #000b43;
     -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -109,11 +109,11 @@ body{
     -webkit-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
     -moz-box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
     box-shadow: 0 0 2px 1px rgba(255, 169, 0, 0.5);
-    border: 1px solid   #001476;
+    border: 1px solid   #000b43;
     background: #fafafa;
   }
   .form_wrapper input[type=submit] {
-    background:   #001476;
+    background:   #000b43;
     height: 35px;
     line-height: 35px;
     width: 100%;
@@ -129,10 +129,10 @@ body{
     transition: all 0.3s ease-in-out;
   }
   .form_wrapper input[type=submit]:hover {
-    background:   #001476;
+    background:   #000b43;
   }
   .form_wrapper input[type=submit]:focus {
-    background:   #001476;
+    background:   #000b43;
   }
   .form_wrapper input[type=checkbox], .form_wrapper input[type=radio] {
     border: 0;
@@ -167,8 +167,8 @@ body{
     transition: all 0.2s ease;
   }
   .checkbox_option label:after {
-    border-right: 2px solid #000000;
-    border-top: 2px solid #000000;
+    border-right: 2px solid #000b43;
+    border-top: 2px solid #000b43;
     content: "";
     height: 20px;
     left: 2px;
@@ -180,10 +180,10 @@ body{
     display: none;
   }
   .checkbox_option input:hover + label:before {
-    border-color: #000000;
+    border-color: #000b43;
   }
   .checkbox_option input:checked + label:before {
-    border-color: #000000;
+    border-color: #000b43;
   }
   .checkbox_option input:checked + label:after {
     -moz-animation: check 0.8s ease 0s running;
@@ -192,7 +192,7 @@ body{
     display: block;
     width: 7px;
     height: 20px;
-    border-color: #000000;
+    border-color: #000b43;
   }
   
   .radio_option label {
@@ -213,11 +213,11 @@ body{
     transition: all 0.2s ease;
   }
   .radio_option input:hover + label:before {
-    border-color: #000000;
+    border-color: #000b43;
   }
   .radio_option input:checked + label:before {
-    background-color: #000000;
-    border-color: #000000;
+    background-color: #000b43;
+    border-color: #000b43;
   }
   
   .select_option {
@@ -243,9 +243,9 @@ body{
     display: none;
   }
   .select_option select:hover, .select_option select:focus {
-    color: #000000;
+    color: #000b43;
     background: #fafafa;
-    border-color: #000000;
+    border-color: #000b43;
     outline: none;
   }
   
@@ -262,7 +262,7 @@ body{
   }
   
   .select_option select:hover + .select_arrow, .select_option select:focus + .select_arrow {
-    border-top-color: #000000;
+    border-top-color: #000b43;
   }
   
   .credit {
@@ -270,10 +270,10 @@ body{
     z-index: 1;
     text-align: center;
     padding: 15px;
-    color:   #001476;
+    color:   #000b43;
   }
   .credit a {
-    color:   #001476;
+    color:   #000b43;
   }
   
   @-webkit-keyframes check {
@@ -411,7 +411,7 @@ body{
   }
 
   .title_container{
-    color:   #001476;
+    color:   #000b43;
     font-weight: bolder;
   }
 
@@ -425,7 +425,8 @@ body{
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
-    background-color:   #001476;
+    background-color:   #000b43;
+    position: relative;
   }
   .nav-menu{
     display: flex;
@@ -512,7 +513,7 @@ body{
   }
   
   #fb-top span{
-    color:  #001476;
+    color:  #000b43;
     float:right;
     margin-right:10px;
   }
@@ -540,7 +541,7 @@ body{
   }
   
   #info {
-    color:  #001476;
+    color:  #000b43;
     line-height:25px;
     font-size:18px;
   }
@@ -561,7 +562,7 @@ body{
   }
   
   #confirm, #delete{
-    background-color:  #001476;
+    background-color:  #000b43;
     color:white;
     padding:7px;
     border-radius:2px;
@@ -607,7 +608,7 @@ body{
   } */
 
   .btnConfirm.fb{
-    background-color:   #001476;
+    background-color:   #000b43;
   }
   .listFriend{
     width: 100px;
@@ -697,11 +698,11 @@ body{
   /* border: 1px solid; */
   box-shadow: 0 0 10px #ddd;
   margin-top: 1rem;
-  padding: 12px 0px;
+  /* padding: 12px 0px; */
 }
 .square .bd{
   /* padding: 15px 3px; */
-  border: 1px solid #f2f2f2;
+  /* border: 1px solid #f2f2f2; */
   margin: 14px 0px;
 } 
 @media(max-width: 767px){
@@ -750,3 +751,77 @@ body{
   display: block;
   transition: 1s;
 } 
+.messg .send{
+  width: fit-content;
+    background-color: #eeeeee;
+    padding: 3px 12px;
+    font-family: monospace;
+    border-radius: 0px 5px 5px 20px;
+    margin: 14px 0px;
+}
+.section{
+    padding: 10px;
+    background-color: #eaeaea;
+    border-bottom: 1.2px solid #a2a2a2;
+    box-shadow: 0px 0px 3px 1px #e1e1e1;
+}
+.redNot{
+  position: absolute;
+    background-color: #ef3838;
+    padding: 0px 5px;
+    color: white;
+    border-radius: 5px;
+    font-size: 11px;
+}
+.ms{
+  right: 12rem;
+  top: 9px;
+}
+.nt{
+  right: 15.8rem;
+
+  top: 9px;
+}
+
+.deleteFriend{
+  background-color: #7289ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 5;
+}
+
+.DeletePost:hover{
+    background-color: #ff000000;
+    align-items: center;
+    color: red;
+    transition: .7s;
+}
+.like{
+  color: #e2e2e2;
+}
+.like.blue{
+    color: #001996;
+    transition: .5s;
+    
+}
+
+.items div.red{
+  color: red;
+}
+.share{
+  background-color: #f1f1f1;
+  width: 500px;
+  position: fixed;
+  left: 30%;
+  top: 30%;
+  display: none;
+  border: 2px solid red;
+}
+.share.vsilibity{
+  
+  display: block;
+}

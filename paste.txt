@@ -461,6 +461,9 @@ if ($_GET['id_user']) {
 
 
 
+            <div onclick="Message()" class="nav-link text-decoration-none text-white message">Message</div>
+
+
 
 
 

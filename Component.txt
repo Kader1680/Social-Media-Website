@@ -1,5 +1,5 @@
 ----------------- Square -------------------
 <div style="width: 200px;" class="square">
     <div class="head bg-danger p-1 text-center">Title</div>
-    <div style="height:auto;" class="bd bg-light">Content
+    <div style="height:auto;" class="bd bg-light">Content</div>
 </div>

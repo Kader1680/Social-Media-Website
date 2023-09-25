@@ -4,8 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-     
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <style>
         <?php include "../assets/css/style.css"; ?>
@@ -16,25 +16,25 @@
         <a href=" /Social-Media-Website/ " class="logo text-decoration-none text-white fs-2">Valley</a>
         <ul class="nav-menu">
         <li class="nav-item">
-            <a href="/Social-Media-Website/page/Home.php" class="nav-link text-decoration-none text-white">Home</a>
+            <a href="/Social-Media-Website/page/Home.php" class="nav-link text-decoration-none text-white"><span class=" d-md-none me-3">Home</span><i class="fa-solid fa-house "></i></a>
         </li>
         <li class="nav-item">
-            <a href=" /Social-Media-Website/AddFriend.php" class="nav-link text-decoration-none text-white">add Friend</a>
+            <a href=" /Social-Media-Website/AddFriend.php" class="nav-link text-decoration-none text-white"><span class=" d-md-none me-3">Add friend</span><i class="fa-solid fa-user-group"></i></a>
         </li>
         <li class="nav-item">
-            <div onclick="Message()" class="nav-link text-decoration-none text-white message">Message</div>
+        <a href=" /Social-Media-Website/message.php" class="nav-link text-decoration-none text-white"><span class=" d-md-none me-3">message</span><i class="fa-solid fa-message"></i></a>
         </li>
         <li class="nav-item">
-            <div onclick="Notification()" id="not" class="nav-link text-decoration-none text-white">Notification</div>
+            <div onclick="Notification()" id="not" class="nav-link text-decoration-none text-white"><span class=" d-md-none me-3">Notification</span><i class="fa-solid fa-bell"></i></div>
         </li>
         <li class="nav-item">
 
-            <a href="/Social-Media-Website/Profile.php" class="nav-link text-decoration-none text-white">Profil</a>
+            <a href="/Social-Media-Website/Profile.php" class="nav-link text-decoration-none text-white"><span class=" d-md-none me-3">Profil</span><i class="fa-solid fa-user"></i></a>
 
 
         </li>
         <li class="nav-item">
-            <a href="/Social-Media-Website/login.php" class="nav-link text-decoration-none text-white">Logout</a>
+            <a href="/Social-Media-Website/login.php" class="nav-link text-decoration-none text-white"><span class=" d-md-none me-3">Logout</span><i class="fa-solid fa-right-from-bracket"></i></a>
         </li>
         </ul>
         <div class="hamburger">
@@ -115,6 +115,9 @@
         <a class="text-center" href="/Social-Media-Website/notification.php">see all</a>
 
     </div>
+
+    <div class="redNot ms">2</div>
+    <div class="redNot nt">1</div>
 
     <script>
 
