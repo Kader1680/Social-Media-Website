@@ -662,8 +662,9 @@ body{
     width: 100%;
   }
   .cover img{
-    width: 150px;
-    height: 150px;
+    width: 90px;
+    height: 90px;
+    padding: 13px;
   }
   .bio .square{
     width: 200px;
@@ -816,12 +817,22 @@ body{
   background-color: #f1f1f1;
   width: 500px;
   position: fixed;
-  left: 30%;
-  top: 30%;
+  left: 50%;
+  top: 50%;
   display: none;
   border: 2px solid red;
+  transform: translate(-50%,-50%);
 }
 .share.vsilibity{
-  
+  width: auto;
+  display: block;
+  padding: 10px;
+
+}
+.share div span{
+  margin-right: 1rem;
+}
+
+.nt.BlockNotifcation{
   display: block;
 }

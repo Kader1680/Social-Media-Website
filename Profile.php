@@ -6,7 +6,6 @@ require "./config.php";
 ?>
 
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -305,13 +304,25 @@ require "./config.php";
                             </div>
 
                             <div class="share">
-                                <div><img width="50" src="https://img.icons8.com/?size=96&id=13912&format=png" alt=""> </div>
+                                <div >
+                                    <img width="50" src="https://img.icons8.com/?size=96&id=13912&format=png" alt=""> 
+                                    <span>Share your Post with facebook</span>
+                                </div>
+                                   
                                 <div> 
                                     <img  width="50" src="https://img.icons8.com/?size=96&id=Xy10Jcu1L2Su&format=png" alt="">
+                                    <span>Share your Post with Insragram</span>
+
                                 </div>
-                                <div> <img width="50" src="https://img.icons8.com/?size=96&id=13930&format=png" > </div>
+                                <div> 
+                                    <img width="50" src="https://img.icons8.com/?size=96&id=13930&format=png" > 
+                                    <span>Share your Post with LinkdIn</span>
+                                
+                                </div>
                                 <div> 
                                     <img width="50" src="https://img.icons8.com/?size=96&id=16713&format=png" />
+                                    <span>Share your Post with wattsap</span>
+
                                 </div>
                             </div>
                         </div>
@@ -335,9 +346,6 @@ require "./config.php";
 
                 ?>
                
-               
-               
-
         </div>
 
                

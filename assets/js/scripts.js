@@ -16,6 +16,9 @@ like.forEach(e => {
     })
 });
 
+
+
+
 let comment = document.querySelectorAll('.reaction svg')
 let post = document.querySelector('.Post')
 comment.forEach(el => {

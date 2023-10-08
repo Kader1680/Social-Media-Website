@@ -44,7 +44,7 @@
         </div>
     </nav>
     </header>
-    <div  style="z-index: 22; width: 320px; right: 15rem; height: auto; position: absolute; background-color: white;
+    <div id="redNot" style="z-index: 22; width: 320px; right: 15rem; height: auto; position: absolute; background-color: white;
     border: 1px solid rgba(0,0,0,.15);
     box-shadow: 0 6px 12px rgb(0 0 0 / 18%); " class="notificaiton" >
         
@@ -121,38 +121,50 @@
 
     <script>
 
+            const hamburger = document.querySelector(".hamburger")
+            const nav_menu = document.querySelector(".nav-menu")
+            hamburger.addEventListener("click",()=>{
+            hamburger.classList.toggle("active");
+            nav_menu.classList.toggle("active");
+            })
+            document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            nav_menu.classList.remove("active");
+            }))
+
+            let Removing = document.getElementById("delete")
+            let fb = document.querySelectorAll('.allFreind #fb')
+            fb.forEach(el => {
+                el.addEventListener(("click"), ()=>{
+                    // element.setAttribute('di')
+                    el.style.display ="none"
+
+                })
+            });
+
+            let notificaiton = document.querySelector('.notificaiton');
+
+            const nt =document.querySelector(".nt")
+            function Notification() {
+                notificaiton.classList.toggle('BlockNotifcation')
 
 
-const hamburger = document.querySelector(".hamburger")
-const nav_menu = document.querySelector(".nav-menu")
-hamburger.addEventListener("click",()=>{
-  hamburger.classList.toggle("active");
-  nav_menu.classList.toggle("active");
-})
-document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
-  hamburger.classList.remove("active");
-  nav_menu.classList.remove("active");
-}))
+            }
+            let message = document.querySelector('.MessageNotifiction');
 
-let Removing = document.getElementById("delete")
-let fb = document.querySelectorAll('.allFreind #fb')
-fb.forEach(el => {
-    el.addEventListener(("click"), ()=>{
-        // element.setAttribute('di')
-        el.style.display ="none"
+            function Message() {
+                MessageNotifiction.classList.toggle('BlockNotifcation')
 
-    })
-});
-        let notificaiton = document.querySelector('.notificaiton');
-        
-        function Notification() {
-            notificaiton.classList.toggle('BlockNotifcation')
-        }
-        let message = document.querySelector('.MessageNotifiction');
+            }
 
-        function Message() {
-            MessageNotifiction.classList.toggle('BlockNotifcation')
-        }
+
+            
+            // notificaiton.addEventListener('click', ()=>{
+                
+
+         
+            // })
+
     </script>
 
     </body> 

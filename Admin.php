@@ -5,19 +5,17 @@ $username = "";
 if (isset($_POST['submit'])) {
     $username = $_POST['UserName'];
     $password = $_POST['Password'];
-    
-    $sql = "SELECT * FROM user WHERE UserName = '$username' AND Password = '$password' ";
-    $result = $conn -> query($sql);
-    $row = mysqli_num_rows($result) ;
-    if ($row  > 0) {
-        session_start();
-        $_SESSION['firstName'] = $firstName  ;
-        $_SESSION['lastName'] = $lastName  ;
-        $_SESSION['email'] = $email  ;
-        $_SESSION['userName'] = $username  ;
-  
-        header("location: /Social-Media-Website/page/Home.php");
-    }else{
+    if ($username === "abdel" && $password === "abdel" ) {
+      header("location: /Social-Media-Website/adminpage.php");
+
+    }
+    // $sql = "SELECT * FROM user WHERE UserName = 'abdel' AND Password = 'abdel' ";
+    // $result = $conn -> query($sql);
+    // if ($result == true) {
+    //   header("location: /Social-Media-Website/adminpage.php");
+      
+    // }
+    else{
         echo "
             <div style='background-color: white;
             width: 400px;
@@ -50,8 +48,7 @@ if (isset($_POST['submit'])) {
 <div class="form_wrapper">
   <div class="form_container">
     <div  class="title_container">
-      <h2>Welcome To Valley</h2>
-      <p>Make Worls Open Contect</p>
+      <h2>Login As Admin</h2>
     </div>
     <div class="row clearfix">
       <div class="">
@@ -59,13 +56,13 @@ if (isset($_POST['submit'])) {
         <div class="row clearfix">
         </div>
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
-            <input type="text" name="UserName" placeholder="UserName"  />
+            <input type="text" name="UserName" placeholder="Admin Name"  />
           </div>
           <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
             <input type="text" name="Password" placeholder="Password"  />
           </div>
-          <input class="button" name="submit" type="submit" value="Login Here" />
-          <a href="Admin.php">Login as Admin</a>
+          <input class="button" name="submit" type="submit" value="Start Now" />
+
         </form>
       </div>
     </div>
