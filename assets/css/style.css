@@ -836,3 +836,14 @@ body{
 .nt.BlockNotifcation{
   display: block;
 }
+.all td{
+  padding: 10px 0px;
+    background-color: #e8e8e8;
+    margin: 10px 0px;
+}
+.login{
+  background-color: #000b43;
+  color: white;
+  text-decoration: none;
+  padding: 4px 20px;
+}

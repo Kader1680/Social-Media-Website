@@ -57,21 +57,22 @@ require "./config.php";
                             if ($row = mysqli_fetch_assoc($result)) {
                                  $id_user = $row['id_user'] ;
                                  $sql = "SELECT * from user WHERE id_user = '$id_user' ";
-                                 $res = $conn->query($sql);
+                                 $reslt = $conn->query($sql);
                             }
                             
-                            while ($row = mysqli_fetch_array($res)) {
+                            while ($row = mysqli_fetch_array($reslt)) {
                          ?>
                             <ul class="d-flex ">
-                                <li style="color:#001476 ">First Name  <span class='ms-3 text-black'><?php echo $row['FirstName'] ?></span></li>
-                                <li style="color:#001476" >Last Name   <span class='ms-3 text-black'><?php echo $row['LastName'] ?></span></li>
-                                <li style="color:#001476">Email       <span class='ms-3 text-black'><?php echo $row['Email'] ?><span></li>
-                                <li style="color:#001476">Username    <span class='ms-3 text-black'><?php echo $row['UserName'] ?><span></li>
+                                <li style="color:#001476 ">First Name <span class='ms-3 text-black'><?php echo $row['FirstName'] ?></span></li>
+                                <li style="color:#001476" >Last Name  <span class='ms-3 text-black'><?php echo $row['LastName'] ?></span></li>
+                                <li style="color:#001476">Email    <span class='ms-3 text-black'><?php echo $row['Email'] ?><span></li>
+                                <li style="color:#001476">Username <span class='ms-3 text-black'><?php echo $row['UserName'] ?><span></li>
                             </ul>
                          <?php
                     }
                     
                     ?>
+                    <a href ="Update.php">update all information</a>
                     </div>
                             
 

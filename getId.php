@@ -14,6 +14,9 @@ if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
 $sql = "SELECT id_user from user where UserName = '$_SESSION[userName]'";
-    $result = $conn->query($sql);
+$result = $conn->query($sql);
     
-    ?>
+    
+    
+    
+?>
