@@ -75,7 +75,7 @@
               <td class='itemUser' >$data[UserName]</td>
               <td class='itemUser' >$data[Email]</td>
               <td class='itemUser' >$data[Password]</td>
-              <td class='itemUser' ><a class='rounded-2 text-white bg-danger text-decoration-none p-1 ' href= 'delete.php' >Delete</a></td>
+              <td class='itemUser' ><a class='rounded-2 text-white bg-danger text-decoration-none p-1 ' href= 'delete.php?id_user=$data[id_user]' >Delete</a></td>
               
               </tr>
               ";
