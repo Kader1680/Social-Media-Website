@@ -16,9 +16,12 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+<style>
+    <?php require "./assets/css/style.css" ?>
+</style>
 <body>
-    <div>
-        <h2>Delete User susessful !</h2>
+    <div class="success">
+        <h2 class="mb-3">Delete User susessful !</h2>
         <a class="login" href="adminpage.php">Back to Admin Page</a>
     </div>
 </body>

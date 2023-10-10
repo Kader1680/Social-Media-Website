@@ -847,3 +847,17 @@ body{
   text-decoration: none;
   padding: 4px 20px;
 }
+
+.success{
+    background-color: #3fd79f;
+    color: white;
+    width: 78%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    text-align: center;
+    padding: 25px;
+    font-weight: 900;
+}
